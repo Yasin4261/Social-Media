@@ -34,7 +34,7 @@ cd socialmaker
 
 ### Adım 2: Veritabanı Kurulumu
 
-- **MySQL Kullanıyorsanız: `application.properties` dosyasında MySQL yapılandırmanızı yapın.
+- **MySQL Kullanıyorsanız:** `application.properties` dosyasında MySQL yapılandırmanızı yapın.
 
 ```bash
 spring.datasource.url=jdbc:mysql://localhost:3306/socialmaker_db
@@ -43,7 +43,7 @@ spring.datasource.password=yourpassword
 ```
 
 
-- **H2 Veritabanı Kullanıyorsanız: H2 veritabanı ayarlarını kullanarak projenizi başlatabilirsiniz.
+- **H2 Veritabanı Kullanıyorsanız:** H2 veritabanı ayarlarını kullanarak projenizi başlatabilirsiniz.
 
 ```bash
 spring.datasource.url=jdbc:h2:mem:testdb
