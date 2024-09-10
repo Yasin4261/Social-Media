@@ -76,13 +76,13 @@ Proje başarıyla başlatıldığında, API `http://localhost:8080` adresinde ç
 - **Kullanıcı Kaydı ve Girişi`**
 
   - `POST /api/auth/register`: Kullanıcı kaydı
- - `POST /api/auth/login`: Kullanıcı girişi
+  - `POST /api/auth/login`: Kullanıcı girişi
 
 - **Profil Yönetimi**
 
- - `GET /api/users/{userId}`: Kullanıcı profil bilgilerini getirir
- - `PUT /api/users/{userId}/update-profile`: Kullanıcı profil bilgilerini günceller
- - `POST /api/users/{userId}/upload-profile-picture`: Profil fotoğrafı yükleme
+  - `GET /api/users/{userId}`: Kullanıcı profil bilgilerini getirir
+  - `PUT /api/users/{userId}/update-profile`: Kullanıcı profil bilgilerini günceller
+  - `POST /api/users/{userId}/upload-profile-picture`: Profil fotoğrafı yükleme
 
 - **Gönderiler**
 
