@@ -73,37 +73,37 @@ Proje başarıyla başlatıldığında, API `http://localhost:8080` adresinde ç
 
 ### API Endpoints
 
-- **Kullanıcı Kaydı ve Girişi
+- **Kullanıcı Kaydı ve Girişi`**
 
--- `POST /api/auth/register`: Kullanıcı kaydı
--- `POST /api/auth/login`: Kullanıcı girişi
+ - `POST /api/auth/register`: Kullanıcı kaydı
+ - `POST /api/auth/login`: Kullanıcı girişi
 
-- **Profil Yönetimi
+- **Profil Yönetimi**
 
--- `GET /api/users/{userId}`: Kullanıcı profil bilgilerini getirir
--- `PUT /api/users/{userId}/update-profile`: Kullanıcı profil bilgilerini günceller
--- `POST /api/users/{userId}/upload-profile-picture`: Profil fotoğrafı yükleme
+ - `GET /api/users/{userId}`: Kullanıcı profil bilgilerini getirir
+ - `PUT /api/users/{userId}/update-profile`: Kullanıcı profil bilgilerini günceller
+ - `POST /api/users/{userId}/upload-profile-picture`: Profil fotoğrafı yükleme
 
-- **Gönderiler
+- **Gönderiler**
 
--- `POST /api/posts`: Yeni gönderi oluşturur
--- `GET /api/posts/user/{userId}`: Belirtilen kullanıcıya ait gönderileri getirir
--- `DELETE /api/posts/{postId}`: Gönderiyi siler
+ - `POST /api/posts`: Yeni gönderi oluşturur
+ - `GET /api/posts/user/{userId}`: Belirtilen kullanıcıya ait gönderileri getirir
+ - `DELETE /api/posts/{postId}`: Gönderiyi siler
 
-- **Yorumlar
+- **Yorumlar**
 
--- `POST /api/posts/{postId}/comments`: Gönderiye yorum yapar
--- `GET /api/posts/{postId}/comments`: Gönderinin yorumlarını getirir
+ - `POST /api/posts/{postId}/comments`: Gönderiye yorum yapar
+ - `GET /api/posts/{postId}/comments`: Gönderinin yorumlarını getirir
 
-- **Beğeniler
+- **Beğeniler**
 
--- `POST /api/posts/{postId}/like`: Gönderiyi beğenir
--- `POST /api/posts/{postId}/unlike`: Gönderiyi beğenmekten vazgeçer
+ - `POST /api/posts/{postId}/like`: Gönderiyi beğenir
+ - `POST /api/posts/{postId}/unlike`: Gönderiyi beğenmekten vazgeçer
 
-- **Takip
+- **Takip**
 
--- `POST /api/users/{userId}/follow/{followedUserId}`: Kullanıcıyı takip eder
--- `DELETE /api/users/{userId}/unfollow/{followedUserId}`: Takipten çıkar
+ - `POST /api/users/{userId}/follow/{followedUserId}`: Kullanıcıyı takip eder
+ - `DELETE /api/users/{userId}/unfollow/{followedUserId}`: Takipten çıkar
 
 ## Örnek API Kullanımı
 
@@ -117,8 +117,8 @@ curl -X POST http://localhost:8080/api/auth/register \
 Katkıda bulunmak için lütfen bir fork yapın ve ardından bir pull request gönderin. Değişikliklerinizi detaylıca açıklamayı unutmayın.
 
 ## Lisans
-Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakın.
+Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakın.
 
 ## İletişim
-Herhangi bir sorunuz veya geri bildiriminiz için email@example.com adresinden bana ulaşabilirsiniz.
+Herhangi bir sorunuz veya geri bildiriminiz için [mail](yasingunesctf@gmail.com) adresinden bana ulaşabilirsiniz.
 
