@@ -75,7 +75,7 @@ Proje başarıyla başlatıldığında, API `http://localhost:8080` adresinde ç
 
 - **Kullanıcı Kaydı ve Girişi`**
 
- - `POST /api/auth/register`: Kullanıcı kaydı
+  - `POST /api/auth/register`: Kullanıcı kaydı
  - `POST /api/auth/login`: Kullanıcı girişi
 
 - **Profil Yönetimi**
