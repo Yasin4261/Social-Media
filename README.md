@@ -34,7 +34,7 @@ cd socialmaker
 
 ### Adım 2: Veritabanı Kurulumu
 
-- **MySQL Kullanıyorsanız: application.properties dosyasında MySQL yapılandırmanızı yapın.
+- **MySQL Kullanıyorsanız: `application.properties` dosyasında MySQL yapılandırmanızı yapın.
 
 ```bash
 spring.datasource.url=jdbc:mysql://localhost:3306/socialmaker_db
@@ -66,7 +66,7 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-Proje başarıyla başlatıldığında, API http://localhost:8080 adresinde çalışacaktır.
+Proje başarıyla başlatıldığında, API `http://localhost:8080` adresinde çalışacaktır.
 
 
 ## Kullanım
@@ -75,35 +75,35 @@ Proje başarıyla başlatıldığında, API http://localhost:8080 adresinde çal
 
 - **Kullanıcı Kaydı ve Girişi
 
--- POST /api/auth/register: Kullanıcı kaydı
--- POST /api/auth/login: Kullanıcı girişi
+-- `POST /api/auth/register`: Kullanıcı kaydı
+-- `POST /api/auth/login`: Kullanıcı girişi
 
 - **Profil Yönetimi
 
--- GET /api/users/{userId}: Kullanıcı profil bilgilerini getirir
--- PUT /api/users/{userId}/update-profile: Kullanıcı profil bilgilerini günceller
--- POST /api/users/{userId}/upload-profile-picture: Profil fotoğrafı yükleme
+-- `GET /api/users/{userId}`: Kullanıcı profil bilgilerini getirir
+-- `PUT /api/users/{userId}/update-profile`: Kullanıcı profil bilgilerini günceller
+-- `POST /api/users/{userId}/upload-profile-picture`: Profil fotoğrafı yükleme
 
 - **Gönderiler
 
--- POST /api/posts: Yeni gönderi oluşturur
--- GET /api/posts/user/{userId}: Belirtilen kullanıcıya ait gönderileri getirir
--- DELETE /api/posts/{postId}: Gönderiyi siler
+-- `POST /api/posts`: Yeni gönderi oluşturur
+-- `GET /api/posts/user/{userId}`: Belirtilen kullanıcıya ait gönderileri getirir
+-- `DELETE /api/posts/{postId}`: Gönderiyi siler
 
 - **Yorumlar
 
--- POST /api/posts/{postId}/comments: Gönderiye yorum yapar
--- GET /api/posts/{postId}/comments: Gönderinin yorumlarını getirir
+-- `POST /api/posts/{postId}/comments`: Gönderiye yorum yapar
+-- `GET /api/posts/{postId}/comments`: Gönderinin yorumlarını getirir
 
 - **Beğeniler
 
--- POST /api/posts/{postId}/like: Gönderiyi beğenir
--- POST /api/posts/{postId}/unlike: Gönderiyi beğenmekten vazgeçer
+-- `POST /api/posts/{postId}/like`: Gönderiyi beğenir
+-- `POST /api/posts/{postId}/unlike`: Gönderiyi beğenmekten vazgeçer
 
 - **Takip
 
--- POST /api/users/{userId}/follow/{followedUserId}: Kullanıcıyı takip eder
--- DELETE /api/users/{userId}/unfollow/{followedUserId}: Takipten çıkar
+-- `POST /api/users/{userId}/follow/{followedUserId}`: Kullanıcıyı takip eder
+-- `DELETE /api/users/{userId}/unfollow/{followedUserId}`: Takipten çıkar
 
 ## Örnek API Kullanımı
 
