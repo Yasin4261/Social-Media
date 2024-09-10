@@ -86,24 +86,24 @@ Proje başarıyla başlatıldığında, API `http://localhost:8080` adresinde ç
 
 - **Gönderiler**
 
- - `POST /api/posts`: Yeni gönderi oluşturur
- - `GET /api/posts/user/{userId}`: Belirtilen kullanıcıya ait gönderileri getirir
- - `DELETE /api/posts/{postId}`: Gönderiyi siler
+  - `POST /api/posts`: Yeni gönderi oluşturur
+  - `GET /api/posts/user/{userId}`: Belirtilen kullanıcıya ait gönderileri getirir
+  - `DELETE /api/posts/{postId}`: Gönderiyi siler
 
 - **Yorumlar**
 
- - `POST /api/posts/{postId}/comments`: Gönderiye yorum yapar
- - `GET /api/posts/{postId}/comments`: Gönderinin yorumlarını getirir
+  - `POST /api/posts/{postId}/comments`: Gönderiye yorum yapar
+  - `GET /api/posts/{postId}/comments`: Gönderinin yorumlarını getirir
 
 - **Beğeniler**
 
- - `POST /api/posts/{postId}/like`: Gönderiyi beğenir
- - `POST /api/posts/{postId}/unlike`: Gönderiyi beğenmekten vazgeçer
+  - `POST /api/posts/{postId}/like`: Gönderiyi beğenir
+  - `POST /api/posts/{postId}/unlike`: Gönderiyi beğenmekten vazgeçer
 
 - **Takip**
 
- - `POST /api/users/{userId}/follow/{followedUserId}`: Kullanıcıyı takip eder
- - `DELETE /api/users/{userId}/unfollow/{followedUserId}`: Takipten çıkar
+  - `POST /api/users/{userId}/follow/{followedUserId}`: Kullanıcıyı takip eder
+  - `DELETE /api/users/{userId}/unfollow/{followedUserId}`: Takipten çıkar
 
 ## Örnek API Kullanımı
 
