@@ -33,11 +33,7 @@ public class UserController {
     public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
         Optional<User> user = userService.loginUser(loginRequest);
 
-        if (user.isPresent()) {
-            return ResponseEntity.ok("Giriş başarılı : Hoşgeldiniz " + user.get().getUserName());
-        } else {
-            return ResponseEntity.status(401).body("Giriş başarısız: Hatalı email veya şifre");
-        }
+        return user.map(value -> ResponseEntity.ok("Giriş başarılı : Hoşgeldiniz " + value.getUserName())).orElseGet(() -> ResponseEntity.status(401).body("Giriş başarısız: Hatalı email veya şifre"));
     }
 
     @PutMapping("/{userId}")
