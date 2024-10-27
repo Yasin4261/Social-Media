@@ -38,9 +38,17 @@ public class PostController {
         User user = userService.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found with id " + userId));
 
-        // Post'ları dönüştürme işlemini daha sade hale getirdik
+        // Post'ları dönüştürme işlemi
         List<PostDTO> postDTOs = user.getPosts().stream()
-                .map(post -> new PostDTO(post.getId(), post.getContent(), post.getImageUrl(), post.getCreatedAt(), post.getUpdatedAt()))
+                .map(
+                        post -> new PostDTO(
+                                post.getId(),
+                                post.getContent(),
+                                post.getImageUrl(),
+                                post.getCreatedAt(),
+                                post.getUpdatedAt()
+                        )
+                )
                 .collect(Collectors.toList());
 
         UserDTO userDTO = UserDTO.builder()
@@ -52,7 +60,4 @@ public class PostController {
 
         return ResponseEntity.ok(userDTO);
     }
-
-
-
 }

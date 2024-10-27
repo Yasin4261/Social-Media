@@ -1,6 +1,7 @@
 package com.api.socialMaker.controllers;
 
 import com.api.socialMaker.dto.LoginRequest;
+import com.api.socialMaker.dto.UserDTO;
 import com.api.socialMaker.dto.UserProfileUpdateRequest;
 import com.api.socialMaker.models.User;
 import com.api.socialMaker.services.UserService;
@@ -20,27 +21,28 @@ public class UserController {
     }
 
     @GetMapping
-    public List<User> getAllUser() {
+    public List<UserDTO> getAllUser() {
         return userService.findAll();
     }
 
     @PostMapping
-    public User createUser(@RequestBody User user) {
+    public UserDTO createUser(@RequestBody User user) {
         return userService.save(user);
     }
 
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
-        Optional<User> user = userService.loginUser(loginRequest);
+        Optional<UserDTO> user = userService.loginUser(loginRequest);
 
-        return user.map(value -> ResponseEntity.ok("Giriş başarılı : Hoşgeldiniz " + value.getUserName())).orElseGet(() -> ResponseEntity.status(401).body("Giriş başarısız: Hatalı email veya şifre"));
+        return user.map(value -> ResponseEntity.ok("Giriş başarılı : Hoşgeldiniz " + value.getUserName()))
+                .orElseGet(() -> ResponseEntity.status(401).body("Giriş başarısız: Hatalı email veya şifre"));
     }
 
     @PutMapping("/{userId}")
     public ResponseEntity<String> updateUserProfile(
             @PathVariable Long userId,
             @RequestBody UserProfileUpdateRequest userProfileUpdateRequest
-            ) {
+    ) {
         userService.updateUserProfile(userId, userProfileUpdateRequest);
         return ResponseEntity.ok("Profil başarıyla güncellendi.");
     }
